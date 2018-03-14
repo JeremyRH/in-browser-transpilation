@@ -1,0 +1,16 @@
+{
+    "plugins": [
+        "external-helpers",
+        "transform-react-jsx"
+    ],
+    "presets": [
+        "stage-3",
+        ["env", {
+            "targets": {
+                "browsers": ["last 2 versions", "ie >= 11"]
+            },
+            "modules": false
+        }],
+        "minify"
+    ]
+}

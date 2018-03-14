@@ -1,0 +1,30 @@
+{
+  "name": "in-browser-transpilation",
+  "version": "0.1.0",
+  "description": "Transpiling in-browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.3.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "rollup": "^0.56.5",
+    "rollup-plugin-alias-module-specifiers": "^0.1.7",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "systemjs": "^0.21.0",
+    "systemjs-plugin-babel": "^0.0.25"
+  }
+}
