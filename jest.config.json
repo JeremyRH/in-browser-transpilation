@@ -1,0 +1,7 @@
+{
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/test/__coverage__",
+    "transform": {
+        "^.+\\.js$": "<rootDir>/jest.transform.js"
+    }
+}

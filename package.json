@@ -4,22 +4,26 @@
   "description": "Transpiling in-browser.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --no-cache --config jest.config.json",
     "build": "rollup -c"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-minify": "^0.3.0",
     "babel-preset-stage-3": "^6.24.1",
+    "jest": "^22.4.2",
     "rollup": "^0.56.5",
     "rollup-plugin-alias-module-specifiers": "^0.1.7",
     "rollup-plugin-babel": "^3.0.3",
