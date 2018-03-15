@@ -15,6 +15,7 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "@babel/standalone": "^7.0.0-beta.41",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.1",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -24,11 +25,10 @@
     "babel-preset-minify": "^0.3.0",
     "babel-preset-stage-3": "^6.24.1",
     "jest": "^22.4.2",
-    "rollup": "^0.56.5",
+    "rollup": "^0.57.0",
     "rollup-plugin-alias-module-specifiers": "^0.1.7",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.1.0",
-    "systemjs": "^0.21.0",
-    "systemjs-plugin-babel": "^0.0.25"
+    "systemjs": "^0.21.0"
   }
 }
