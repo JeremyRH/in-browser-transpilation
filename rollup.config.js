@@ -7,8 +7,7 @@ export default [
         input: 'src/main.js',
         output: {
             file: 'dist/bundle.js',
-            format: 'iife',
-            name: 'main'
+            format: 'iife'
         },
         plugins: [
             aliasModuleSpecifiers({
@@ -40,8 +39,7 @@ export default [
         input: 'src/polyfills.js',
         output: {
             file: 'dist/polyfills.js',
-            format: 'es',
-            name: 'polyfills'
+            format: 'es'
         },
         plugins: [
             aliasModuleSpecifiers({
