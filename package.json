@@ -1,34 +1,35 @@
 {
   "name": "in-browser-transpilation",
   "version": "0.1.0",
-  "description": "Transpiling in-browser.",
-  "main": "index.js",
+  "description": "Transpiling JSX and modules in-browser.",
+  "main": "src/main.js",
   "scripts": {
     "test": "jest --no-cache --config jest.config.json",
     "build": "rollup -c"
   },
-  "author": "",
+  "author": "JeremyRH",
+  "repository": "https://github.com/JeremyRH/in-browser-transpilation",
   "license": "ISC",
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
+    "@babel/polyfill": "^7.0.0-beta.42",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "@babel/standalone": "^7.0.0-beta.41",
-    "babel-core": "^6.26.0",
-    "babel-jest": "^22.4.1",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-minify": "^0.3.0",
-    "babel-preset-stage-3": "^6.24.1",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/plugin-external-helpers": "^7.0.0-beta.42",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.42",
+    "@babel/plugin-transform-react-jsx": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/preset-stage-3": "^7.0.0-beta.42",
+    "@babel/standalone": "^7.0.0-beta.42",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.0.0-alpha.0",
     "jest": "^22.4.2",
-    "rollup": "^0.57.0",
+    "rollup": "^0.57.1",
     "rollup-plugin-alias-module-specifiers": "^0.1.7",
-    "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.1.0",
-    "systemjs": "^0.21.0"
+    "systemjs": "^0.21.0",
+    "uglify-js": "^3.3.15"
   }
 }
