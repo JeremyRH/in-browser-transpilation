@@ -1,7 +1,8 @@
-const babel = require('babel-standalone');
+const { transform } = require('@babel/standalone');
 
-exports.translate = function(load) {
-    const output = babel.transform(load.source, {
+exports.translate = function({ name, metadata, source }) {
+    const output = transform(source, {
+        filename: name,
         plugins: [
             'transform-modules-systemjs',
             'transform-react-jsx'
@@ -11,7 +12,6 @@ exports.translate = function(load) {
         ],
         sourceMaps: true
     });
-    output.map.sources = [load.name];
-    load.metadata.sourceMap = output.map;
+    metadata.sourceMap = output.map;
     return output.code;
 };
