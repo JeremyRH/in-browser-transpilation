@@ -17,8 +17,10 @@ export default {
     input: 'src/main.js',
     output: {
         file: 'dist/main.min.js',
-        format: 'iife'
+        format: 'iife',
+        name: 'main'
     },
+    experimentalDynamicImport: true,
     plugins: [
         postcss({
             extract: true,
@@ -35,7 +37,6 @@ export default {
                 return transformAsync(source, {
                     ast: false,
                     babelrc: false,
-                    compact: true,
                     plugins: [
                         '@babel/plugin-external-helpers',
                         '@babel/plugin-transform-react-jsx'
