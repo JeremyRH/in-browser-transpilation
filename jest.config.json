@@ -1,7 +1,11 @@
 {
     "collectCoverage": true,
+    "collectCoverageFrom": [
+        "<rootDir>/src/**/*.js"
+    ],
     "coverageDirectory": "<rootDir>/test/__coverage__",
     "transform": {
-        "^.+\\.js$": "<rootDir>/jest.transform.js"
+        "^.+\\.js$": "<rootDir>/jest.transform-js.js",
+        "^.+\\.css$": "<rootDir>/jest.transform-css.js"
     }
 }
