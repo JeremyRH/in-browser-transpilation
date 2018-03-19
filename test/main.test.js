@@ -1,6 +1,6 @@
 document.body.innerHTML = '<div id="root"></div>';
-require('../src/main.js');
 
-test('main should not error', () => {
+test('main should not error', async () => {
+    await import('../src/main.js');
     expect(document.getElementById('root').childElementCount).toBeGreaterThan(0);
 });
