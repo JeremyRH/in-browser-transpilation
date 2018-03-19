@@ -1,10 +1,17 @@
 import { buildExternalHelpers, transform } from '@babel/core';
+import autoprefixer from 'autoprefixer';
+import cssClean from 'postcss-clean';
 import aliasModuleSpecifiers from 'rollup-plugin-alias-module-specifiers';
 import commonjs from 'rollup-plugin-commonjs';
+import postcss from 'rollup-plugin-postcss'
 import { minify } from 'uglify-js';
 import { promisify } from 'util';
 
 const transformAsync = promisify(transform);
+const browserTargets = [
+    'last 2 versions',
+    'ie >= 11'
+];
 
 export default {
     input: 'src/main.js',
@@ -13,6 +20,15 @@ export default {
         format: 'iife'
     },
     plugins: [
+        postcss({
+            extract: true,
+            plugins: [
+                autoprefixer({
+                    browsers: browserTargets
+                }),
+                cssClean()
+            ]
+        }),
         {
             name: 'babel-transform',
             transform(source) {
@@ -28,10 +44,7 @@ export default {
                         '@babel/preset-stage-3',
                         ['@babel/preset-env', {
                             targets: {
-                                browsers: [
-                                    'last 2 versions',
-                                    'ie >= 11'
-                                ]
+                                browsers: browserTargets
                             },
                             modules: false
                         }]
@@ -49,7 +62,7 @@ export default {
         {
             name: 'external-babelHelpers',
             transformBundle(bundledSource) {
-                return buildExternalHelpers() + bundledSource;
+                return buildExternalHelpers() + '\n' + bundledSource;
             }
         },
         {
