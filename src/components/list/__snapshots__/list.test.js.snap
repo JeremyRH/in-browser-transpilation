@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component snapshot 1`] = `
+<div
+  className="list"
+>
+  <ul>
+    <li>
+      a
+    </li>
+    <li>
+      b
+    </li>
+    <li>
+      c
+    </li>
+  </ul>
+  <input
+    onInput={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    Add
+  </button>
+</div>
+`;

@@ -1,13 +1,12 @@
 import './main.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from './components/button.js';
-import Input from './components/input.js';
+import List from 'components/list/list.js';
 
 ReactDOM.render(
     <>
-        <Button clickHandler={() => alert('you clicked me')} text="click me" />
-        <Input placeholder="im an input" />
+        <h1>List of things</h1>
+        <List initialItems={['one', 'two', 'three']} />
     </>,
     document.getElementById('root')
 );
