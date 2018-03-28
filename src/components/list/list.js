@@ -1,28 +1,30 @@
-import './list.css';
-import React from 'react';
+import "./list.css";
+import React from "react";
 
-class List extends React.Component {
+export default class List extends React.Component {
+    static defaultProps = {
+        initialItems: []
+    };
     constructor(props) {
         super(props);
-        const { initialItems = [] } = props;
         this.state = {
-            items: initialItems,
-            inputValue: ''
+            inputValue: "",
+            items: props.initialItems
         };
     }
-    onInput = (ev) => {
+    onInput = ev => {
         this.setState({
             inputValue: ev.target.value.trim()
         });
     };
     addItem = () => {
         this.setState(state => {
-            if (state.inputValue === '') {
+            if (state.inputValue === "") {
                 return state;
             }
             return {
                 items: [...state.items, state.inputValue]
-            }
+            };
         });
     };
     render() {
@@ -39,5 +41,3 @@ class List extends React.Component {
         );
     }
 }
-
-export default List;

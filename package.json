@@ -4,8 +4,9 @@
   "description": "Transpiling JSX and modules in-browser.",
   "main": "src/main.js",
   "scripts": {
-    "test": "jest -c jest/jest.config.js",
-    "build": "rollup -c rollup/rollup.config.js"
+    "build": "rollup -c rollup/rollup.config.js",
+    "lint": "eslint .",
+    "test": "jest -c jest/jest.config.js"
   },
   "author": "JeremyRH",
   "repository": "https://github.com/JeremyRH/in-browser-transpilation",
@@ -25,8 +26,11 @@
     "@babel/standalone": "^7.0.0-beta.42",
     "autoprefixer": "^8.2.0",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.2.2",
     "babel-jest": "^23.0.0-alpha.1",
     "babel-plugin-dynamic-import-node": "^1.2.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0",
     "jest": "^22.4.3",
     "postcss-clean": "^1.1.0",
     "react-test-renderer": "^16.2.0",
@@ -36,5 +40,11 @@
     "rollup-plugin-postcss": "^1.4.0",
     "systemjs": "^0.21.0",
     "uglify-js": "^3.3.16"
-  }
+  },
+  "eslintConfig": {
+    "extends": "./eslint/eslint.config.js"
+  },
+  "eslintIgnore": [
+    "dist/"
+  ]
 }

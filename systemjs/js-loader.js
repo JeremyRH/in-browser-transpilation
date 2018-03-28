@@ -1,14 +1,14 @@
-const { transform } = require('@babel/standalone');
+const { transform } = require("@babel/standalone");
 
-exports.translate = function({ name, metadata, source }) {
+exports.translate = ({ name, metadata, source }) => {
     const output = transform(source, {
         filename: name,
         plugins: [
-            'transform-modules-systemjs',
-            'transform-react-jsx'
+            "transform-modules-systemjs",
+            "transform-react-jsx"
         ],
         presets: [
-            'stage-3'
+            "stage-3"
         ],
         sourceMaps: true
     });

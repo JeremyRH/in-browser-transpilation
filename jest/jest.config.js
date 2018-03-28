@@ -1,13 +1,13 @@
 module.exports = {
     moduleNameMapper: {
-        '^components/(.+)': '<rootDir>/src/components/$1'
+        "^components/(.+)": "<rootDir>/src/components/$1"
     },
-    rootDir: '../',
+    rootDir: "../",
     roots: [
-        '<rootDir>/src'
+        "<rootDir>/src"
     ],
     transform: {
-        '^.+\\.js$': '<rootDir>/jest/transform-js.js',
-        '^.+\\.css$': '<rootDir>/jest/transform-css.js'
+        "^.+\\.css$": "<rootDir>/jest/transform-css.js",
+        "^.+\\.js$": "<rootDir>/jest/transform-js.js"
     }
 };
